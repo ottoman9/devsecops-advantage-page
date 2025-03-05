@@ -1,7 +1,6 @@
 
-import { 
-  GitMerge, Shield, Cloud, BarChart, HardDrive, Package2
-} from "lucide-react";
+import { GitMerge, Shield, Cloud, BarChart, HardDrive, Package2 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -64,6 +63,15 @@ const Services = () => {
               <p className="text-white/70">{service.description}</p>
             </div>
           ))}
+        </div>
+        
+        <div className="text-center mt-12">
+          <Link 
+            to="/services" 
+            className="inline-flex items-center gap-2 text-white hover:text-white/80 transition-all border-b border-white/30 pb-1 hover:border-white"
+          >
+            View All Services
+          </Link>
         </div>
       </div>
     </section>

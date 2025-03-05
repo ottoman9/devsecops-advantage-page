@@ -1,5 +1,6 @@
 
 import { ArrowRight, Calendar, Mail, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   return (
@@ -53,13 +54,13 @@ const Contact = () => {
                   Book a 30-minute call to discuss your business needs and how I can help you achieve your goals.
                 </p>
                 
-                <a 
-                  href="#" 
+                <Link 
+                  to="/contact" 
                   className="group bg-white hover:bg-white/90 text-black font-medium px-6 py-3 rounded-full w-full flex items-center justify-center gap-2 transition-all"
                 >
                   Book Your Call Now 
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
