@@ -28,7 +28,7 @@ const Navbar = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled 
-          ? "py-3 bg-background/80 backdrop-blur-lg shadow-sm" 
+          ? "py-3 bg-background/90 backdrop-blur-md border-b border-border" 
           : "py-5 bg-transparent"
       )}
     >
@@ -38,12 +38,12 @@ const Navbar = () => {
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-8">
           <a href="#services" className="text-sm font-medium hover:text-primary transition-colors">Services</a>
           <a href="#about" className="text-sm font-medium hover:text-primary transition-colors">About</a>
           <a href="#testimonials" className="text-sm font-medium hover:text-primary transition-colors">Testimonials</a>
-          <a href="#contact" className="cta-button text-sm">
-            Schedule a Consultation
+          <a href="#contact" className="bg-primary/10 hover:bg-primary/20 text-primary font-medium text-sm px-4 py-2 rounded-md transition-colors">
+            Contact
           </a>
         </nav>
 
@@ -86,10 +86,10 @@ const Navbar = () => {
           </a>
           <a 
             href="#contact" 
-            className="cta-button text-lg mt-4" 
+            className="bg-primary/10 hover:bg-primary/20 text-primary font-medium px-5 py-2 rounded-md mt-4 transition-colors" 
             onClick={() => setIsOpen(false)}
           >
-            Schedule a Consultation
+            Contact
           </a>
         </nav>
       </div>

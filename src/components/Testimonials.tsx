@@ -35,10 +35,10 @@ const Testimonials = () => {
   };
 
   return (
-    <section id="testimonials" className="section bg-gradient-to-b from-accent to-background">
+    <section id="testimonials" className="section bg-background">
       <div className="container-custom">
         <div className="text-center mb-16 animate-fade-in">
-          <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-secondary text-foreground text-sm font-medium mb-6">
             Client Success Stories
           </div>
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
@@ -51,26 +51,26 @@ const Testimonials = () => {
           <div className="absolute top-1/2 -left-5 md:-left-12 transform -translate-y-1/2 z-10">
             <button 
               onClick={prevTestimonial}
-              className="bg-background rounded-full p-3 shadow-lg hover:shadow-xl transition-all"
+              className="bg-background border border-border rounded-full p-3 hover:shadow-md transition-all"
               aria-label="Previous testimonial"
             >
-              <ChevronLeft className="h-6 w-6 text-primary" />
+              <ChevronLeft className="h-6 w-6 text-foreground" />
             </button>
           </div>
           
           <div className="absolute top-1/2 -right-5 md:-right-12 transform -translate-y-1/2 z-10">
             <button 
               onClick={nextTestimonial}
-              className="bg-background rounded-full p-3 shadow-lg hover:shadow-xl transition-all"
+              className="bg-background border border-border rounded-full p-3 hover:shadow-md transition-all"
               aria-label="Next testimonial"
             >
-              <ChevronRight className="h-6 w-6 text-primary" />
+              <ChevronRight className="h-6 w-6 text-foreground" />
             </button>
           </div>
 
           {/* Testimonial Slider */}
-          <div className="overflow-hidden relative bg-background rounded-2xl p-8 md:p-12 shadow-xl animate-fade-in">
-            <Quote className="absolute top-8 left-8 h-12 w-12 text-primary/10" />
+          <div className="overflow-hidden relative bg-background border border-border rounded-2xl p-8 md:p-12 animate-fade-in">
+            <Quote className="absolute top-8 left-8 h-12 w-12 text-secondary" />
             
             <div 
               className="transition-all duration-500 ease-in-out"
@@ -87,7 +87,7 @@ const Testimonials = () => {
                     </blockquote>
                     
                     <div className="flex flex-col items-center">
-                      <div className="w-16 h-16 rounded-full overflow-hidden mb-4 border-2 border-primary">
+                      <div className="w-16 h-16 rounded-full overflow-hidden mb-4 border-2 border-primary/20">
                         <img 
                           src={testimonial.avatar} 
                           alt={testimonial.name}
@@ -112,7 +112,7 @@ const Testimonials = () => {
                   key={index}
                   onClick={() => setCurrentIndex(index)}
                   className={`w-2.5 h-2.5 rounded-full transition-all ${
-                    index === currentIndex ? "bg-primary w-6" : "bg-primary/30"
+                    index === currentIndex ? "bg-primary w-6" : "bg-secondary"
                   }`}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />

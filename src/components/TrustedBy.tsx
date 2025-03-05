@@ -9,7 +9,7 @@ const logos = [
 
 const TrustedBy = () => {
   return (
-    <section className="section bg-background">
+    <section className="section bg-secondary/50">
       <div className="container-custom">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-2xl md:text-3xl font-display font-bold mb-6">

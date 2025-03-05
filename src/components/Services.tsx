@@ -38,10 +38,10 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="section bg-accent">
+    <section id="services" className="section bg-background">
       <div className="container-custom">
         <div className="text-center mb-16 animate-fade-in">
-          <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-secondary text-foreground text-sm font-medium mb-6">
             What I Offer
           </div>
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
@@ -52,11 +52,11 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <div 
               key={index}
-              className="bg-background rounded-xl p-8 shadow-lg shadow-primary/5 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:translate-y-[-5px] animate-fade-in"
+              className="bg-background border border-border rounded-xl p-8 hover:shadow-md transition-all duration-300 animate-fade-in"
               style={{ animationDelay: `${100 * index}ms` }}
             >
               <div className="text-primary mb-6">{service.icon}</div>
