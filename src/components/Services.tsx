@@ -38,16 +38,16 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="section bg-background">
+    <section id="services" className="section bg-black">
       <div className="container-custom">
         <div className="text-center mb-16 animate-fade-in">
-          <div className="inline-flex items-center px-3 py-1 rounded-full bg-secondary text-foreground text-sm font-medium mb-6">
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 text-white/90 text-sm font-medium mb-6">
             What I Offer
           </div>
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-white">
             Comprehensive DevOps & DevSecOps Solutions
           </h2>
-          <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
+          <p className="text-lg text-white/70 max-w-2xl mx-auto">
             Whatever your DevOps or DevSecOps needs, I've got you covered!
           </p>
         </div>
@@ -56,12 +56,12 @@ const Services = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="bg-background border border-border rounded-xl p-8 hover:shadow-md transition-all duration-300 animate-fade-in"
+              className="bg-secondary/50 border border-white/10 rounded-xl p-8 hover:bg-white/5 transition-all duration-300 animate-fade-in"
               style={{ animationDelay: `${100 * index}ms` }}
             >
-              <div className="text-primary mb-6">{service.icon}</div>
-              <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-              <p className="text-foreground/80">{service.description}</p>
+              <div className="text-white mb-6">{service.icon}</div>
+              <h3 className="text-xl font-semibold mb-3 text-white">{service.title}</h3>
+              <p className="text-white/70">{service.description}</p>
             </div>
           ))}
         </div>

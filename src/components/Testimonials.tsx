@@ -35,13 +35,13 @@ const Testimonials = () => {
   };
 
   return (
-    <section id="testimonials" className="section bg-background">
+    <section id="testimonials" className="section bg-dark-gradient">
       <div className="container-custom">
         <div className="text-center mb-16 animate-fade-in">
-          <div className="inline-flex items-center px-3 py-1 rounded-full bg-secondary text-foreground text-sm font-medium mb-6">
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 text-white/90 text-sm font-medium mb-6">
             Client Success Stories
           </div>
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-white">
             What My Clients Say
           </h2>
         </div>
@@ -51,26 +51,26 @@ const Testimonials = () => {
           <div className="absolute top-1/2 -left-5 md:-left-12 transform -translate-y-1/2 z-10">
             <button 
               onClick={prevTestimonial}
-              className="bg-background border border-border rounded-full p-3 hover:shadow-md transition-all"
+              className="bg-white/5 border border-white/10 rounded-full p-3 hover:bg-white/10 transition-all"
               aria-label="Previous testimonial"
             >
-              <ChevronLeft className="h-6 w-6 text-foreground" />
+              <ChevronLeft className="h-6 w-6 text-white" />
             </button>
           </div>
           
           <div className="absolute top-1/2 -right-5 md:-right-12 transform -translate-y-1/2 z-10">
             <button 
               onClick={nextTestimonial}
-              className="bg-background border border-border rounded-full p-3 hover:shadow-md transition-all"
+              className="bg-white/5 border border-white/10 rounded-full p-3 hover:bg-white/10 transition-all"
               aria-label="Next testimonial"
             >
-              <ChevronRight className="h-6 w-6 text-foreground" />
+              <ChevronRight className="h-6 w-6 text-white" />
             </button>
           </div>
 
           {/* Testimonial Slider */}
-          <div className="overflow-hidden relative bg-background border border-border rounded-2xl p-8 md:p-12 animate-fade-in">
-            <Quote className="absolute top-8 left-8 h-12 w-12 text-secondary" />
+          <div className="overflow-hidden relative bg-secondary/30 border border-white/10 rounded-2xl p-8 md:p-12 animate-fade-in">
+            <Quote className="absolute top-8 left-8 h-12 w-12 text-white/10" />
             
             <div 
               className="transition-all duration-500 ease-in-out"
@@ -82,12 +82,12 @@ const Testimonials = () => {
                     key={index} 
                     className="min-w-full flex flex-col items-center px-6"
                   >
-                    <blockquote className="text-lg md:text-xl text-center mb-8 relative z-10">
+                    <blockquote className="text-lg md:text-xl text-white/90 text-center mb-8 relative z-10">
                       "{testimonial.quote}"
                     </blockquote>
                     
                     <div className="flex flex-col items-center">
-                      <div className="w-16 h-16 rounded-full overflow-hidden mb-4 border-2 border-primary/20">
+                      <div className="w-16 h-16 rounded-full overflow-hidden mb-4 border-2 border-white/20">
                         <img 
                           src={testimonial.avatar} 
                           alt={testimonial.name}
@@ -96,8 +96,8 @@ const Testimonials = () => {
                         />
                       </div>
                       <div className="text-center">
-                        <h4 className="font-semibold">{testimonial.name}</h4>
-                        <p className="text-sm text-foreground/70">{testimonial.position}</p>
+                        <h4 className="font-semibold text-white">{testimonial.name}</h4>
+                        <p className="text-sm text-white/70">{testimonial.position}</p>
                       </div>
                     </div>
                   </div>
@@ -112,7 +112,7 @@ const Testimonials = () => {
                   key={index}
                   onClick={() => setCurrentIndex(index)}
                   className={`w-2.5 h-2.5 rounded-full transition-all ${
-                    index === currentIndex ? "bg-primary w-6" : "bg-secondary"
+                    index === currentIndex ? "bg-white w-6" : "bg-white/30"
                   }`}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />

@@ -9,13 +9,13 @@ const logos = [
 
 const TrustedBy = () => {
   return (
-    <section className="section bg-secondary/50">
+    <section className="section bg-black/90">
       <div className="container-custom">
         <div className="text-center mb-12 animate-fade-in">
-          <h2 className="text-2xl md:text-3xl font-display font-bold mb-6">
+          <h2 className="text-2xl md:text-3xl font-display font-bold mb-6 text-white">
             Trusted by Leading Brands
           </h2>
-          <p className="text-foreground/70 max-w-2xl mx-auto">
+          <p className="text-white/70 max-w-2xl mx-auto">
             I've collaborated with industry leaders to optimize their DevOps and security practices.
           </p>
         </div>
@@ -24,7 +24,7 @@ const TrustedBy = () => {
           {logos.map((logo, index) => (
             <div 
               key={index} 
-              className="flex justify-center items-center grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 animate-fade-in"
+              className="flex justify-center items-center opacity-70 invert hover:opacity-100 transition-all duration-300 animate-fade-in"
               style={{ animationDelay: `${100 * index}ms` }}
             >
               <img 

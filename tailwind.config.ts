@@ -111,6 +111,10 @@ export default {
 				'slide-down': 'slide-down 0.6s ease-out',
 				'slide-in-right': 'slide-in-right 0.6s ease-out',
 				'pulse-subtle': 'pulse-subtle 3s infinite ease-in-out'
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'dark-gradient': 'linear-gradient(to bottom, #111111, #000000)',
 			}
 		}
 	},
